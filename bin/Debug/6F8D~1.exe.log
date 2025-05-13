@@ -1,0 +1,106 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\DF4C~1\0DED~1\F7D8~1\bin\Debug\6F8D~1.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0x964C8C6A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0xA80 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:108:
+
+    106: 
+    107:     txEnd();
+=>  108:     txSleep(20);
+    109:     }
+    110: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 13 2025 10:17:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 13 2025 10:22:05
+
+Run file:	C:\DF4C~1\0DED~1\F7D8~1\bin\Debug\6F8D~1.exe
+Directory:	C:\DF4C~1\0DED~1\F7D8~1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\DF4C~1\0DED~1\F7D8~1\bin\Debug\6F8D~1.exe,
+
+ВНЕЗАПНО: Неверный или уже закрытый дескриптор.
+
+#1: Исключение EXCEPTION_INVALID_HANDLE (0xC0000008) при выполнении кода по адресу 0x964C8C6A. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdrE0, Thread: 0xA80 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in void {anonymous}::TX::_txOnExitProcess(unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:8958:
+
+   8956:         }
+   8957: 
+=> 8958: $5  _txCleanup();
+   8959: 
+   8960:     if (retcode != 0)
+
+# 1 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:108:
+
+    106: 
+    107:     txEnd();
+=>  108:     txSleep(20);
+    109:     }
+    110: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 13 2025 10:17:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 13 2025 10:22:05
+
+Run file:	C:\DF4C~1\0DED~1\F7D8~1\bin\Debug\6F8D~1.exe
+Directory:	C:\DF4C~1\0DED~1\F7D8~1
+
+--------------------------------------------------
