@@ -24,6 +24,31 @@
 
 #include "TXLib.h"
 
+struct Forma
+{
+    string text_q;
+    HDC picture_answer1;
+    string text_a1;
+    HDC picture_answer2;
+    string text_a2;
+    HDC picture_answer3;
+    string text_a3;
+    int n_right_a;
+
+    void draw()
+    {
+    txDrawText (200, 90, 780, 160,  text_q.c_str());                      // question
+     txBitBlt(txDC(), 20, 203, 260, 275,  picture_answer1);                      // picture 1
+    txDrawText (20, 520, 280, 610,  text_a1.c_str());                     // answer 1
+     txBitBlt(txDC(), 352, 203, 285, 275, picture_answer2);                      // picture 2
+    txDrawText (335, 520, 660, 610, text_a2.c_str());                     // answer 2
+     txBitBlt(txDC(), 713, 203, 275, 275, picture_answer3);                      // picture 3
+    txDrawText (720, 520, 990, 610, text_a3.c_str());                     // answer 3
+    }
+};
+
+
+
 void Maket()
 {
 
@@ -48,19 +73,51 @@ void Maket()
 
 int main()
     {
-    txCreateWindow (1000, 700);
-    txTextCursor (false);
+txCreateWindow (1000, 700);
+txTextCursor (false);
+
+Forma form_list[20];
+    form_list[0] = {"Столица России?",
+              txLoadImage("Pictures/Ульян.bmp"),
+              "Ульяновск",
+              txLoadImage("Pictures/Москва.bmp"),
+              "Москва",
+              txLoadImage("Pictures/ПИТЕР.bmp"),
+              "Санкт-Питербург", 2};
+    form_list[1] = {"Родной город В. Ленина?",
+              txLoadImage("Pictures/ПИТЕР.bmp"),
+              "Санкт-Питербург",
+              txLoadImage("Pictures/Москва.bmp"),
+              "Москва",
+              txLoadImage("Pictures/Ульян.bmp"),
+              "Ульяновск", 3};
+
+    form_list[2] = {"Город в названии которого есть имя?",
+              txLoadImage("Pictures/Ульян.bmp"),
+              "Ульяновск",
+              txLoadImage("Pictures/Москва.bmp"),
+              "Москва",
+              txLoadImage("Pictures/ПИТЕР.bmp"),
+              "Санкт-Питербург", 3};
+
+Forma form;
 
 
     HDC ulyan = txLoadImage("Pictures/Ульян.bmp");
     HDC mockv = txLoadImage("Pictures/Москва.bmp");
     HDC piter = txLoadImage("Pictures/ПИТЕР.bmp");
 
-    int count_question = 1;
+    int count_question = 3;
     int n_question = 1;
+    char stu[20];
+    int score = 0;
 
-    while (n_question <= count_question)
+
+
+        while (n_question <= count_question)
     {
+    txSetFillColor (TX_BLACK);
+    txClear();
     txBegin();
     Maket();
 
@@ -69,23 +126,26 @@ int main()
     txSetColor (TX_LIGHTGREEN);
     txSelectFont ("Times", 40);
     txSetTextAlign (TA_CENTER);
+    sprintf(stu, "Вопрос №%d из %d" , n_question, count_question);
+    txTextOut(865, 30, stu);                         // Number question
 
-    txDrawText (730, 20, 980, 80, "Вопрос №");               // Number qest
-    txDrawText (200, 90, 780, 160, "Столица России?");   // question
-     txBitBlt(txDC(), 20, 203, 260, 275, ulyan);                          // picture 1
-    txDrawText (20, 520, 280, 610, "Ульяновск");             // answer 1
-     txBitBlt(txDC(), 352, 203, 285, 275, mockv);                         // picture 2
-    txDrawText (335, 520, 660, 610, "Москва");               // answer 2
-     txBitBlt(txDC(), 713, 203, 275, 275, piter);                         // picture 3
-    txDrawText (720, 520, 990, 610, "Санкт-Питербург");      // answer 3
+
+    form = form_list[n_question-1];
+    form.draw();
+
+
+
 
     //click answer 1 (left)
     if(txMouseButtons() == 1 &&
     txMouseX()>20 && txMouseX()<280 &&
     txMouseY()>520 && txMouseY() < 610 )
     {
+        if (form.n_right_a == 1) score ++;
+        while (txMouseButtons() == 1) txSleep(250);
         n_question ++;
     }
+
 
 
     //click answer 2 (middle)
@@ -93,14 +153,20 @@ int main()
     txMouseX()>352 && txMouseX()<660 &&
     txMouseY()>520 && txMouseY() < 610 )
     {
+        if (form.n_right_a == 2) score ++;
+        while (txMouseButtons() == 1) txSleep(250);
         n_question ++;
     }
+
+
 
      //click answer 3 (right)
     if(txMouseButtons() == 1 &&
     txMouseX()>720 && txMouseX()<990 &&
     txMouseY()>520 && txMouseY() < 610 )
     {
+        if (form.n_right_a == 3) score ++;
+        while (txMouseButtons() == 1) txSleep(250);
         n_question ++;
     }
 
@@ -108,8 +174,10 @@ int main()
     txSleep(20);
     }
 
-
-
+    txSetFillColor (TX_BLACK);
+    txClear();
+    sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+    txTextOut(500, 350, stu);                         // test result
 
 
 
