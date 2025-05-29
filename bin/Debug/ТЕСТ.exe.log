@@ -248,3 +248,832 @@ Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
 Directory:	C:\Windows\System32
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13722, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0xC7C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13722:
+
+  13720:     {
+  13721: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13722: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13723: 
+  13724: $   POINT size = txGetExtent (sourceImage);
+
+# 1 in void Forma::draw() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:44:
+
+     42:     {
+     43:     txDrawText (200, 90, 780, 160,  text_q.c_str());                      // question
+=>   44:      txBitBlt(txDC(), 20, 203, 260, 275,  picture_a1);                      // picture 1
+     45:     txDrawText (20, 520, 280, 610,  text_a1.c_str());                     // answer 1
+     46:      txBitBlt(txDC(), 352, 203, 285, 275, picture_a2);                      // picture 2
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:19:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:20:05
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13722, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x5A8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13722:
+
+  13720:     {
+  13721: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13722: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13723: 
+  13724: $   POINT size = txGetExtent (sourceImage);
+
+# 1 in void Forma::draw() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:44:
+
+     42:     {
+     43:     txDrawText (200, 90, 780, 160,  text_q.c_str());                      // question
+=>   44:      txBitBlt(txDC(), 20, 203, 260, 275,  picture_a1);                      // picture 1
+     45:     txDrawText (20, 520, 280, 610,  text_a1.c_str());                     // answer 1
+     46:      txBitBlt(txDC(), 352, 203, 285, 275, picture_a2);                      // picture 2
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:38:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:39:24
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1C18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:51:24
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1C18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:51:25
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1F30 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:53:07
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1F30 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:53:07
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13274, функция: HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdrE0, Thread: 0x1A84 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13274:
+
+  13272: HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+  13273:     {
+=>13274: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13275: 
+  13276: $   HBRUSH brush = (color == TX_TRANSPARENT)? (HBRUSH) Win32::GetStockObject (HOLLOW_BRUSH) : Win32::CreateSolidBrush (color);
+
+# 1 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:136:
+
+    134:         while (n_question <= count_question)
+    135:     {
+=>  136:     txSetFillColor (TX_BLACK);
+    137:     txClear();
+    138:     txBegin();
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13274, функция: HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC),
+
+Сообщение: Окно рисования не создано или не в порядке.
+Если вы указали параметр "dc", то он неверен.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdrE0, Thread: 0x1ABC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HBRUSH__* {anonymous}::TX::txSetFillColor(COLORREF, HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h:13274:
+
+  13272: HBRUSH txSetFillColor (COLORREF color, HDC dc /*= txDC()*/)
+  13273:     {
+=>13274: $1  if (_TX_DEFAULT_HDC_FAILED (dc)) return NULL;
+  13275: 
+  13276: $   HBRUSH brush = (color == TX_TRANSPARENT)? (HBRUSH) Win32::GetStockObject (HOLLOW_BRUSH) : Win32::CreateSolidBrush (color);
+
+# 1 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:136:
+
+    134:         while (n_question <= count_question)
+    135:     {
+=>  136:     txSetFillColor (TX_BLACK);
+    137:     txClear();
+    138:     txBegin();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:55:06
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2470 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:55:52
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x2470 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:55:52
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1A00 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:58:17
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000302D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1A00 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 09:50:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 09:58:16
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x9D8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:04:35
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x9D8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:04:35
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x430 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:05:03
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x430 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:05:03
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1FF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:05:52
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00401433. Попытка записать данные по адресу 0x0000312D в модуле C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRe0, Thread: 0x1FF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Проекты Елаев А\Викторина\ТЕСТ\main.cpp:197:
+
+    195:     txClear();
+    196:     sprintf(stu, "Ваш результат %d из %d" , score , count_question);
+=>  197:     txTextOut(500, 350, stu);                         // test result
+    198: 
+    199: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	May 29 2025 10:03:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	May 29 2025 10:05:52
+
+Run file:	C:\Проекты Елаев А\Викторина\ТЕСТ\bin\Debug\ТЕСТ.exe
+Directory:	C:\Проекты Елаев А\Викторина\ТЕСТ
+
+--------------------------------------------------

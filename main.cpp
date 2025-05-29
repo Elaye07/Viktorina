@@ -23,26 +23,29 @@
 //}=======================================================================
 
 #include "TXLib.h"
+#include <fstream>
+
+using namespace std;
 
 struct Forma
 {
     string text_q;
-    HDC picture_answer1;
+    HDC picture_a1;
     string text_a1;
-    HDC picture_answer2;
+    HDC picture_a2;
     string text_a2;
-    HDC picture_answer3;
+    HDC picture_a3;
     string text_a3;
     int n_right_a;
 
     void draw()
     {
     txDrawText (200, 90, 780, 160,  text_q.c_str());                      // question
-     txBitBlt(txDC(), 20, 203, 260, 275,  picture_answer1);                      // picture 1
+     txBitBlt(txDC(), 20, 203, 260, 275,  picture_a1);                      // picture 1
     txDrawText (20, 520, 280, 610,  text_a1.c_str());                     // answer 1
-     txBitBlt(txDC(), 352, 203, 285, 275, picture_answer2);                      // picture 2
+     txBitBlt(txDC(), 352, 203, 285, 275, picture_a2);                      // picture 2
     txDrawText (335, 520, 660, 610, text_a2.c_str());                     // answer 2
-     txBitBlt(txDC(), 713, 203, 275, 275, picture_answer3);                      // picture 3
+     txBitBlt(txDC(), 713, 203, 275, 275, picture_a3);                      // picture 3
     txDrawText (720, 520, 990, 610, text_a3.c_str());                     // answer 3
     }
 };
@@ -66,6 +69,15 @@ void Maket()
 }
 
 
+string getPart(string str, int *pos2)
+{
+    int pos1 = *pos2 + 1;
+    *pos2 = str.find(",", pos1);
+    string part = str.substr(pos1, *pos2-(pos1));
+    return part;
+
+
+}
 
 
 
@@ -75,30 +87,37 @@ int main()
     {
 txCreateWindow (1000, 700);
 txTextCursor (false);
+//HDC fonch = txLoadImage("Pictures/ПОЛЕ.bmp");
+//txBitBlt(txDC(), 0,0,1000,700, fonch);
 
 Forma form_list[20];
-    form_list[0] = {"Столица России?",
-              txLoadImage("Pictures/Ульян.bmp"),
-              "Ульяновск",
-              txLoadImage("Pictures/Москва.bmp"),
-              "Москва",
-              txLoadImage("Pictures/ПИТЕР.bmp"),
-              "Санкт-Питербург", 2};
-    form_list[1] = {"Родной город В. Ленина?",
-              txLoadImage("Pictures/ПИТЕР.bmp"),
-              "Санкт-Питербург",
-              txLoadImage("Pictures/Москва.bmp"),
-              "Москва",
-              txLoadImage("Pictures/Ульян.bmp"),
-              "Ульяновск", 3};
+int i = 0;
+ setlocale(LC_ALL, "Russian");
 
-    form_list[2] = {"Город в названии которого есть имя?",
-              txLoadImage("Pictures/Ульян.bmp"),
-              "Ульяновск",
-              txLoadImage("Pictures/Москва.bmp"),
-              "Москва",
-              txLoadImage("Pictures/ПИТЕР.bmp"),
-              "Санкт-Питербург", 3};
+
+    string str;
+
+    ifstream file("test.txt");
+
+    while(file.good())
+    {
+        getline(file, str);
+
+        int pos2 = -1;
+        form_list[i].text_q = getPart(str, &pos2);
+        form_list[i].picture_a1 = txLoadImage(getPart(str, &pos2).c_str());
+        form_list[i].text_a1 = getPart(str, &pos2);
+        form_list[i].picture_a2 = txLoadImage(getPart(str, &pos2).c_str());
+        form_list[i].text_a2 = getPart(str, &pos2);
+        form_list[i].picture_a3 = txLoadImage(getPart(str, &pos2).c_str());
+        form_list[i].text_a3 = getPart(str, &pos2);
+        form_list[i].n_right_a = atoi(getPart(str, &pos2).c_str());
+        i++;
+    }
+    file.close();
+
+
+
 
 Forma form;
 
@@ -107,7 +126,7 @@ Forma form;
     HDC mockv = txLoadImage("Pictures/Москва.bmp");
     HDC piter = txLoadImage("Pictures/ПИТЕР.bmp");
 
-    int count_question = 3;
+    int count_question = 11;
     int n_question = 1;
     char stu[20];
     int score = 0;

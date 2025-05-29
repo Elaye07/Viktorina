@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1747713557 source:c:\проекты елаев а\викторина\тест\main.cpp
+1748495008 source:c:\проекты елаев а\викторина\тест\main.cpp
 	"TXLib.h"
+	<fstream>
 
